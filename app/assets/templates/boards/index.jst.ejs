@@ -1,0 +1,10 @@
+<h2>Boards Index</h2>
+<ul>
+
+<% this.collection.forEach(function(board){ %>
+  <li><a href="/#boards/<%=board.get("id")%>"><%= board.escape("title") %></a></li>
+<% }) %>
+</ul>
+
+<br><br>
+<a href="#/boards/new" style="font-size:300%">Add Board</a>
