@@ -15,36 +15,16 @@ class BoardsController < ApplicationController
     @boards = Board.all
     respond_to do |format|
       format.html
-      
-      # format.json do
-      #   render :json => @boards
-      # end  
-      
-      # format.json do
-      #   Jbuilder.encode do |json|
-      #     json.array! @boards do |board|
-      #       json.id board.id
-      #       json.title board.title
-      #       json.created_at board.created_at
-      #       json.updated_at board.updated_at
-      #       json.lists board.lists
-      #     end
-      #   end
-      # end
-      
-      format.json do 
-        Board.all.each do |board|
-          board.to_json(:include => :lists)
-        end
+      format.json do
+        render "boards/jindex"
       end
     end
-    
   end
   
   def show
     @board = Board.find(params[:id])
-    
-    render json: @board
+    @lists = @board.lists
+    render "boards/show"
   end
   
   def create
