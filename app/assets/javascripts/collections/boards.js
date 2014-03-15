@@ -3,13 +3,6 @@ window.Trellino.Collections.Boards = Backbone.Collection.extend({
   url:"boards",
   model: Trellino.Models.Board,
   
-  lists: function(){
-    
-    //time to parse out the response from the rails server....need to send lists along
-    
-    
-  },
-  
   getOrFetch: function(id){
     
     var boards = this;
