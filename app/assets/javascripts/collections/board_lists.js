@@ -3,9 +3,8 @@ window.Trellino.Collections.BoardLists = Backbone.Collection.extend({
   
   model: Trellino.Models.List,
   
-  initialize: function (models, options) {
+  initialize: function (models, options){
     this.board = options.board;
   }
+  
 })
-
-window.Trellino.Collections.boardlists = new Trellino.Collections.BoardLists();
