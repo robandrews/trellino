@@ -19,9 +19,9 @@ window.Trellino.Views.BoardsNew = Backbone.View.extend({
     var newBoard = new Trellino.Models.Board(params);
     
     newBoard.save({}, {
-      success: function () {
+      success: function (board) {
         Trellino.Collections.boards.add(newBoard);
-        Backbone.history.navigate("", { trigger: true });
+        Backbone.history.navigate("/boards/" + board.id, { trigger: true });
       }
     });
     

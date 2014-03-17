@@ -2,7 +2,8 @@
 <ul>
 
 <% this.collection.forEach(function(board){ %>
-  <li><a href="/#boards/<%=board.get("id")%>"><%= board.escape("title") %></a></li>
+  <li><a href="/#boards/<%=board.get("id")%>"><%= board.escape("title") %></a> 
+      <button class="delete-board" id="<%=board.id%>">Delete</button></li>
 <% }) %>
 </ul>
 

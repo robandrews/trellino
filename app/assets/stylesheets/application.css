@@ -99,3 +99,11 @@ button:hover, input[type="submit"]:hover {
   background-color: transparent;
   color: blue;
 }
+
+.list{
+  float:left;
+  padding:10px;
+  margin:15px 0 0 15px;
+  border-style: solid;
+  border-color: black;
+}

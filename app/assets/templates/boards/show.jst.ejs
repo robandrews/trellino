@@ -1,3 +1,29 @@
 <h2> Page for <%=board.escape("title")%> </h2>
 
-<div id="all-lists"></div>
+<div class="container-fluid">
+  <div class="row">
+    
+    <div class="col-md-8">
+      <a href="#boards/<%=board.id%>/lists/new" class="btn btn-primary btn-lg active">Add a list</a>
+      <br>
+      <div class="row">
+      <div id="all-lists">
+      </div>
+    </div>
+      
+    </div>
+    
+    <div class="col-md-4">
+      <h3>Board Members</h3>
+      <div id="board-members">
+      </div>
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <input type="email" id="add-user" placeholder="Add user by email">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>  
+    </div>
+    
+  </div>
+</div>
