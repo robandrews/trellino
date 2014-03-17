@@ -50,7 +50,7 @@ window.Trellino.Views.BoardsShow = Backbone.CompositeView.extend({
   },
   
   events: {
-    "submit": "addMember",
+    "submit": "addMember"
   },
   
   addMember: function(event){
@@ -70,8 +70,7 @@ window.Trellino.Views.BoardsShow = Backbone.CompositeView.extend({
     return this;
  },
  
- renderLists: function(){  
-   
+ renderLists: function(){    
    this.model.lists().each(function(list){
      var currentList = new Trellino.Views.ListShow({
        model: list

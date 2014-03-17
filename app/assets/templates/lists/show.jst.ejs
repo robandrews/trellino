@@ -1,1 +1,14 @@
 <%= list.get("title") %>
+<div class="cards" id="<%=list.id + "cards" %>"</div>
+<br>
+<button class="add-card" id="<%=list.id%>" data-toggle="modal" data-target="div#add-field">Add Card</button>
+<button class="delete-list" id="<%=list.get("board_id")%>">Delete List</button>
+
+// <div class="modal fade" id="add-field" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+//   <div class="modal-dialog modal-sm">
+//     <div class="modal-content">
+//     <input type="text" name="list[title]" id="list_title" placeholder="New Card">
+//     <input type="submit" value="Add">
+//     </div>
+//   </div>
+// </div>

@@ -10,6 +10,26 @@ window.Trellino.Views.ListShow = Backbone.View.extend({
     this.$el.html(renderedContent);
     
     return this;
-  }  
+  },
   
+  events: {
+    "click .delete-list":"deleteList"  
+  },
+  
+  deleteList: function(event){
+    event.preventDefault();
+    var id = event.target.id;
+    var list = 
+  }
+  
+  removeBoard: function (event) {
+    var id = event.target.id;
+    var board = this.collection.getOrFetch(id);
+    
+    board.destroy({
+      success:function(){
+        board.lists().remove(board);
+      }
+    });
+  }
 })
