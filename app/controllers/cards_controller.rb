@@ -27,6 +27,21 @@ class CardsController < ApplicationController
     end
   end
   
+  def show
+    @card = Card.find(params[:id])
+    
+    if @card
+      respond_to do |format|
+        format.html
+        format.json do
+          render json: @card
+        end
+      end
+    else
+      render json: { errors: @card.errors.full_messages }, status: 422
+    end
+  end
+  
   def destroy
     @card = Card.find(params[:id])
     @card.destroy

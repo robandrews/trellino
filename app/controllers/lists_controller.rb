@@ -2,12 +2,12 @@ class ListsController < ApplicationController
   
   def index
     @lists = List.where("board_id = ?", params[:board_id])
-    render json: @lists
+    render "lists/index"
   end
   
   def show
-    @list = List.find(params[:list_id])
-    render json: @list
+    @list = List.find(params[:id])
+    render "lists/show"
   end
   
   def create

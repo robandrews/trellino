@@ -19,8 +19,7 @@ window.Trellino.Views.ListShow = Backbone.View.extend({
   deleteList: function(event){
     event.preventDefault();
     var id = event.target.id;
-    var list = 
-  }
+  },
   
   removeBoard: function (event) {
     var id = event.target.id;

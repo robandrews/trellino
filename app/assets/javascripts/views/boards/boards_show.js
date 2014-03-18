@@ -53,12 +53,6 @@ window.Trellino.Views.BoardsShow = Backbone.CompositeView.extend({
     "submit": "addMember"
   },
   
-  addMember: function(event){
-    event.preventDefault();
-    debugger
-    $("#add-user")
-  },
-  
   render: function(){
     var renderedContent = this.template({ 
       lists: this.model.lists(),
@@ -70,12 +64,14 @@ window.Trellino.Views.BoardsShow = Backbone.CompositeView.extend({
     return this;
  },
  
- renderLists: function(){    
+ renderLists: function(){
+    
    this.model.lists().each(function(list){
      var currentList = new Trellino.Views.ListShow({
        model: list
      })
      this.addSubView('#all-lists', currentList.render())
+ 
    }, this);
  }
  

@@ -1,0 +1,4 @@
+window.Trelino.Models.CardShow = Backbone.Model.extend({
+  urlRoot:"cards",
+  template: JST["cards/show"]
+})
